@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTOP NextGen Dashboard</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7b4b7dbf53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-circle">
+                V
+            </div>
+
+            <div class="logo-text">
+                <h2>VTOP NEXTGEN</h2>
+                <p>AI Student Portal</p>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="main.html" class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Attendance
+            </a>
+
+            <a href="timetable.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                Timetable
+            </a>
+
+            <a href="marks.html">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Marks
+            </a>
+
+            <a href="gradehistory.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Grade History
+            </a>
+
+            <a href="academiccalendar.html">
+                <i class="fa-solid fa-calendar"></i>
+                Academic Calendar
+            </a>
+
+        </nav>
+
+        <div class="bottom-menu">
+
+            <button>
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </button>
+
+            <button onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- NAVBAR -->
+
+        <header class="topbar">
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search subjects, faculty, classrooms...">
+
+            </div>
+
+            <div class="top-right">
+
+                <div id="clock"></div>
+
+                <button class="notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>3</span>
+
+                </button>
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        SV
+                    </div>
+
+                    <div>
+
+                        <h3>Shri Vishwa</h3>
+
+                        <p>22BCE0000</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div>
+
+                <h1>
+                    Good Evening,
+                    <span>Shri Vishwa 👋</span>
+                </h1>
+
+                <p>
+                    Welcome back. You have
+                    <b>4 classes</b>
+                    today and
+                    <b>2 assignments</b>
+                    due this week.
+                </p>
+
+            </div>
+
+            <div class="semester">
+
+                <h3>B.Tech CSE</h3>
+
+                <p>Semester 5</p>
+
+                <span>Academic Year 2026-27</span>
+
+            </div>
+
+        </section>
+
+        <!-- ================= STATS ================= -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+                <h4>CGPA</h4>
+
+                <h2>9.12</h2>
+
+                <p>Top 5% Department</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-check"></i>
+
+                <h4>Attendance</h4>
+
+                <h2>86%</h2>
+
+                <p class="safe">
+                    Safe
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <h4>Credits Earned</h4>
+
+                <h2>114 / 130</h2>
+
+                <p>87% Completed</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <h4>Today's Classes</h4>
+
+                <h2>4</h2>
+
+                <p>08:30 AM - 03:30 PM</p>
+
+            </div>
+
+        </section>
+
+        <!-- ================= WARNING ================= -->
+
+        <section class="warning-card">
+
+            <div>
+
+                <h2>
+
+                    Attendance Status
+
+                </h2>
+
+                <p>
+
+                    Overall Attendance
+
+                    <span id="attendanceText">
+
+                        86%
+
+                    </span>
+
+                </p>
+
+            </div>
+
+            <button id="attendanceButton">
+
+                SAFE
+
+            </button>
+
+        </section>
+
+        <!-- ================= TIMETABLE ================= -->
+
+        <section class="today">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Today's Timetable
+
+                </h2>
+
+                <button>
+
+                    View Full Schedule
+
+                </button>
+
+            </div>
+
+            <div class="lecture">
+
+                <div class="time">
+
+                    08:30
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Web Technologies
+
+                    </h3>
+
+                    <p>
+
+                        MG-405
+
+                    </p>
+
+                </div>
+
+                <span>
+
+                    Theory
+
+                </span>
+
+            </div>
+
+            <div class="lecture">
+
+                <div class="time">
+
+                    10:00
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Network Security
+
+                    </h3>
+
+                    <p>
+
+                        MG-408
+
+                    </p>
+
+                </div>
+
+                <span>
+
+                    Theory
+
+                </span>
+
+            </div>
+
+            <div class="lecture">
+
+                <div class="time">
+
+                    11:30
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Graph Theory
+
+                    </h3>
+
+                    <p>
+
+                        MG-102
+
+                    </p>
+
+                </div>
+
+                <span>
+
+                    Theory
+
+                </span>
+
+            </div>
+
+            <div class="lecture">
+
+                <div class="time">
+
+                    02:00
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Network Protocol Lab
+
+                    </h3>
+
+                    <p>
+
+                        Net Lab 2
+
+                    </p>
+
+                </div>
+
+                <span>
+
+                    Lab
+
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- PROCTOR MESSAGE -->
+
+        <div class="ticker">
+
+            <marquee>
+
+                📢 PROCTOR MESSAGE :
+                Meet me on Monday at 5:00 PM in CAB-302 regarding Internship Registration.
+
+            </marquee>
+
+        </div>
+
+        <!-- QUICK NAVIGATION -->
+
+        <section class="quick-grid">
+
+            <a href="attendance.html" class="quick-card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>Attendance</h3>
+
+            </a>
+
+            <a href="timetable.html" class="quick-card">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h3>Timetable</h3>
+
+            </a>
+
+            <a href="marks.html" class="quick-card">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h3>Marks</h3>
+
+            </a>
+
+            <a href="gradehistory.html" class="quick-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>Grade History</h3>
+
+            </a>
+
+            <a href="academiccalendar.html" class="quick-card">
+
+                <i class="fa-solid fa-calendar"></i>
+
+                <h3>Academic Calendar</h3>
+
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- Saturday Popup -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-content">
+
+        <h2>
+
+            📢 Academic Notice
+
+        </h2>
+
+        <p>
+
+            This Saturday is a
+
+            <b>WORKING DAY.</b>
+
+        </p>
+
+        <h3>
+
+            Follow Monday Timetable.
+
+        </h3>
+
+        <button onclick="closePopup()">
+
+            Got It
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

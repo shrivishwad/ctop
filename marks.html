@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Marks Analytics | VTOP NEXTGEN</title>
+
+<link rel="stylesheet"
+href="marks.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/7b4b7dbf53.js"
+crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<h2>VTOP</h2>
+
+<a href="../Main/main.html">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+<a href="../Attendance/attendance.html">
+
+<i class="fa-solid fa-chart-pie"></i>
+
+Attendance
+
+</a>
+
+<a href="../Timetable/timetable.html">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+Timetable
+
+</a>
+
+<a class="active">
+
+<i class="fa-solid fa-book"></i>
+
+Marks
+
+</a>
+
+<a href="../Grade History/gradehistory.html">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+Grade History
+
+</a>
+
+<a href="../Academic Calendar/academiccalendar.html">
+
+<i class="fa-solid fa-calendar"></i>
+
+Academic Calendar
+
+</a>
+
+</aside>
+
+<!-- Main -->
+
+<main>
+
+<header>
+
+<div>
+
+<h1>
+
+Marks Analytics
+
+</h1>
+
+<p class="subtitle">
+
+Track your academic performance like a pro.
+
+</p>
+
+</div>
+
+<div class="header-right">
+
+<input
+type="text"
+id="searchSubject"
+placeholder="Search subject...">
+
+</div>
+
+</header>
+
+<!-- Top Cards -->
+
+<section class="top-cards">
+
+<div class="stat-card">
+
+<h3>Overall %</h3>
+
+<h1 id="overallPercent">
+
+87%
+
+</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Semester GPA</h3>
+
+<h1 id="sgpa">
+
+8.91
+
+</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>CGPA</h3>
+
+<h1 id="cgpa">
+
+8.76
+
+</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Credits</h3>
+
+<h1 id="credits">
+
+96
+
+</h1>
+
+</div>
+
+</section>
+
+<!-- Subject Cards -->
+
+<section>
+
+<h2>
+
+Subject Performance
+
+</h2>
+
+<div
+id="marksGrid"
+class="marks-grid">
+
+</div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="statistics">
+
+<div class="info-box">
+
+<h3>
+
+Highest Marks
+
+</h3>
+
+<h1 id="highest">
+
+95
+
+</h1>
+
+</div>
+
+<div class="info-box">
+
+<h3>
+
+Lowest Marks
+
+</h3>
+
+<h1 id="lowest">
+
+72
+
+</h1>
+
+</div>
+
+<div class="info-box">
+
+<h3>
+
+Average
+
+</h3>
+
+<h1 id="average">
+
+86
+
+</h1>
+
+</div>
+
+</section>
+
+<!-- GPA Predictor -->
+
+<section class="predictor">
+
+<h2>
+
+GPA Predictor
+
+</h2>
+
+<div class="predict-box">
+
+<input
+type="number"
+id="expectedMarks"
+placeholder="Expected Average Marks">
+
+<button id="predict">
+
+Predict GPA
+
+</button>
+
+</div>
+
+<h2 id="predictionResult">
+
+Expected GPA: --
+
+</h2>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="marks.js"></script>
+
+</body>
+
+</html>

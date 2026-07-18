@@ -1,0 +1,829 @@
+/* =========================================
+   VTOP NEXTGEN
+   TIMETABLE.CSS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+
+    --bg:#070B14;
+    --sidebar:#0E1525;
+    --card:#121827;
+    --card2:#1A2436;
+
+    --accent:#FF4D5A;
+    --accent2:#FF8A4D;
+
+    --blue:#4F8CFF;
+    --purple:#8B5CF6;
+    --green:#22C55E;
+    --orange:#F59E0B;
+    --cyan:#06B6D4;
+    --pink:#EC4899;
+
+    --text:#F5F7FA;
+    --text2:#A7B0C6;
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ========================================
+        LAYOUT
+======================================== */
+
+.container{
+
+    display:grid;
+
+    grid-template-columns:260px 1fr;
+
+    min-height:100vh;
+
+}
+
+/* ========================================
+        SIDEBAR
+======================================== */
+
+.sidebar{
+
+    background:var(--sidebar);
+
+    padding:35px 25px;
+
+    border-right:1px solid var(--border);
+
+    position:sticky;
+
+    top:0;
+
+    height:100vh;
+
+}
+
+.sidebar h2{
+
+    font-size:30px;
+
+    margin-bottom:45px;
+
+    font-weight:800;
+
+}
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    color:var(--text2);
+
+    text-decoration:none;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:#1B2538;
+
+    color:white;
+
+}
+
+.sidebar .active{
+
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+
+    color:white;
+
+}
+
+/* ========================================
+            MAIN
+======================================== */
+
+main{
+
+    padding:40px;
+
+}
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    color:var(--text2);
+
+    margin-top:8px;
+
+}
+
+/* ========================================
+        HEADER RIGHT
+======================================== */
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.header-right input{
+
+    width:270px;
+
+    height:48px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+    background:#141D2F;
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.header-right input:focus{
+
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(255,77,90,.15);
+
+}
+
+#clock{
+
+    background:var(--card);
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    border:1px solid var(--border);
+
+    min-width:120px;
+
+    text-align:center;
+
+}
+/* ========================================
+        CURRENT CLASS
+======================================== */
+
+.current-class{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.current-info{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    transition:.35s;
+
+}
+
+.current-info:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.live-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,77,90,.15);
+
+    color:#FF7B84;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.current-info h2{
+
+    font-size:34px;
+
+    margin-bottom:14px;
+
+    font-weight:700;
+
+}
+
+.current-info p{
+
+    color:var(--text2);
+
+    margin-bottom:8px;
+
+    font-size:16px;
+
+}
+
+/* ========================================
+        COUNTDOWN CARD
+======================================== */
+
+.countdown{
+
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+
+    border-radius:24px;
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 18px 40px rgba(255,77,90,.30);
+
+    transition:.35s;
+
+}
+
+.countdown:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.countdown h3{
+
+    font-size:18px;
+
+    margin-bottom:18px;
+
+    opacity:.9;
+
+}
+
+.countdown h1{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+/* ========================================
+        DAY SELECTOR
+======================================== */
+
+.days{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.day{
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--card);
+
+    color:var(--text2);
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.day:hover{
+
+    background:#1C2638;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+.day.active{
+
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(255,77,90,.25);
+
+}
+
+/* ========================================
+        TIMETABLE GRID
+======================================== */
+
+.timetable-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:24px;
+
+}
+/* ========================================
+        TIMETABLE CARD
+======================================== */
+
+.timetable-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.22);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.timetable-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* ========================================
+        SUBJECT COLORS
+======================================== */
+
+.subject-bar{
+
+    width:100%;
+
+    height:6px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+}
+
+.ai{
+
+    background:linear-gradient(90deg,#8B5CF6,#A855F7);
+
+}
+
+.dbms{
+
+    background:linear-gradient(90deg,#22C55E,#4ADE80);
+
+}
+
+.os{
+
+    background:linear-gradient(90deg,#F59E0B,#FBBF24);
+
+}
+
+.cn{
+
+    background:linear-gradient(90deg,#06B6D4,#22D3EE);
+
+}
+
+.cloud{
+
+    background:linear-gradient(90deg,#3B82F6,#60A5FA);
+
+}
+
+.math{
+
+    background:linear-gradient(90deg,#EC4899,#F472B6);
+
+}
+
+.break{
+
+    background:linear-gradient(90deg,#64748B,#94A3B8);
+
+}
+
+/* ========================================
+        CARD CONTENT
+======================================== */
+
+.time{
+
+    font-size:15px;
+
+    color:var(--text2);
+
+    margin-bottom:12px;
+
+}
+
+.subject{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.faculty{
+
+    color:var(--text2);
+
+    margin-bottom:8px;
+
+}
+
+.room{
+
+    color:var(--text2);
+
+    margin-bottom:22px;
+
+}
+
+/* ========================================
+        FOOTER
+======================================== */
+
+.card-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.badge{
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:rgba(79,140,255,.15);
+
+    color:var(--blue);
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.break-badge{
+
+    background:rgba(100,116,139,.18);
+
+    color:#CBD5E1;
+
+}
+
+.current{
+
+    border:2px solid var(--accent);
+
+    box-shadow:0 0 25px rgba(255,77,90,.28);
+
+}
+
+/* ========================================
+        ANIMATIONS
+======================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.timetable-card{
+
+    animation:fadeUp .6s ease;
+
+}
+
+/* ========================================
+        SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0B1220;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#303D57;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--accent);
+
+}
+
+/* ========================================
+        RESPONSIVE
+======================================== */
+
+@media(max-width:1200px){
+
+    .current-class{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        position:relative;
+
+        height:auto;
+
+        display:flex;
+
+        overflow-x:auto;
+
+        gap:12px;
+
+        align-items:center;
+
+    }
+
+    .sidebar h2{
+
+        display:none;
+
+    }
+
+    .sidebar a{
+
+        white-space:nowrap;
+
+        margin-bottom:0;
+
+    }
+
+    header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .header-right{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .header-right input{
+
+        width:100%;
+
+    }
+
+    #clock{
+
+        width:100%;
+
+    }
+
+    main{
+
+        padding:25px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    header h1{
+
+        font-size:28px;
+
+    }
+
+    .current-info h2{
+
+        font-size:28px;
+
+    }
+
+    .countdown h1{
+
+        font-size:32px;
+
+    }
+
+    .days{
+
+        justify-content:center;
+
+    }
+
+    .timetable-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .subject{
+
+        font-size:20px;
+
+    }
+
+}

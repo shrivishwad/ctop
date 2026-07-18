@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Timetable | VTOP NEXTGEN</title>
+
+    <link rel="stylesheet" href="timetable.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7b4b7dbf53.js"
+            crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>VTOP</h2>
+
+        <a href="../Main/main.html">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </a>
+
+        <a href="../Attendance/attendance.html">
+            <i class="fa-solid fa-chart-pie"></i>
+            Attendance
+        </a>
+
+        <a class="active">
+            <i class="fa-solid fa-calendar-days"></i>
+            Timetable
+        </a>
+
+        <a href="../Marks/marks.html">
+            <i class="fa-solid fa-book"></i>
+            Marks
+        </a>
+
+        <a href="../Grade History/gradehistory.html">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Grade History
+        </a>
+
+        <a href="../Academic Calendar/academiccalendar.html">
+            <i class="fa-solid fa-calendar"></i>
+            Academic Calendar
+        </a>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main>
+
+        <header>
+
+            <div>
+
+                <h1>Weekly Timetable</h1>
+
+                <p class="subtitle">
+
+                    Stay organized and never miss a class.
+
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <input
+                    type="text"
+                    id="searchSubject"
+                    placeholder="Search subject...">
+
+                <div id="clock">
+
+                    10:25:34
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Current Class -->
+
+        <section class="current-class">
+
+            <div class="current-info">
+
+                <span class="live-badge">
+
+                    🔴 LIVE
+
+                </span>
+
+                <h2 id="currentSubject">
+
+                    Operating Systems
+
+                </h2>
+
+                <p id="currentFaculty">
+
+                    Dr. Ramesh Kumar
+
+                </p>
+
+                <p id="currentRoom">
+
+                    AB2-405
+
+                </p>
+
+            </div>
+
+            <div class="countdown">
+
+                <h3>
+
+                    Next Class In
+
+                </h3>
+
+                <h1 id="countdown">
+
+                    00:18:24
+
+                </h1>
+
+            </div>
+
+        </section>
+
+        <!-- Days -->
+
+        <section class="days">
+
+            <button class="day active">Monday</button>
+            <button class="day">Tuesday</button>
+            <button class="day">Wednesday</button>
+            <button class="day">Thursday</button>
+            <button class="day">Friday</button>
+            <button class="day">Saturday</button>
+
+        </section>
+
+        <!-- Timetable -->
+
+        <section>
+
+            <div id="timetableGrid" class="timetable-grid">
+
+                <!-- JS Generates Cards -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="timetable.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1494 @@
+/* =========================================
+   VTOP NEXTGEN
+   MAIN.CSS
+   Author : ChatGPT
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================= ROOT ================= */
+
+:root{
+
+    --bg:#070B14;
+
+    --card:#131A2B;
+
+    --card2:#1A2336;
+
+    --accent:#FF4D5A;
+
+    --blue:#4F8CFF;
+
+    --green:#20D58A;
+
+    --yellow:#FFC857;
+
+    --text:#F5F7FA;
+
+    --text2:#A8B2C8;
+
+    --border:#202B43;
+
+    --shadow:0px 10px 35px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+}
+
+/* ================= RESET ================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0B1220;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--accent);
+
+    border-radius:20px;
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+
+    width:270px;
+
+    background:#0D1322;
+
+    border-right:1px solid var(--border);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    bottom:0;
+
+    padding:25px;
+
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:45px;
+
+}
+
+.logo-circle{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#FF4D5A,#FF7A4D);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.logo-text h2{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.logo-text p{
+
+    color:var(--text2);
+
+    font-size:13px;
+
+}
+
+/* ================= MENU ================= */
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.sidebar nav a{
+
+    text-decoration:none;
+
+    color:var(--text2);
+
+    padding:16px 18px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    transition:.35s;
+
+    font-size:15px;
+
+}
+
+.sidebar nav a:hover{
+
+    background:rgba(255,77,90,.15);
+
+    color:white;
+
+    transform:translateX(6px);
+
+}
+
+.sidebar nav a.active{
+
+    background:linear-gradient(90deg,#FF4D5A,#FF6E5E);
+
+    color:white;
+
+    box-shadow:0 8px 25px rgba(255,77,90,.3);
+
+}
+
+.sidebar nav a i{
+
+    width:20px;
+
+    text-align:center;
+
+}
+
+/* ================= BOTTOM ================= */
+
+.bottom-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.bottom-menu button{
+
+    border:none;
+
+    background:#18233A;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.bottom-menu button:hover{
+
+    background:var(--accent);
+
+    transform:translateY(-2px);
+
+}
+
+/* ================= MAIN ================= */
+
+main{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+/* SEARCH */
+
+.search{
+
+    width:420px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px 20px;
+
+}
+
+.search i{
+
+    color:var(--text2);
+
+}
+
+.search input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.search input::placeholder{
+
+    color:#7B879E;
+
+}
+
+/* RIGHT */
+
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+/* CLOCK */
+
+#clock{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:white;
+
+}
+
+/* BELL */
+
+.notification{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:var(--card);
+
+    color:white;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.notification:hover{
+
+    transform:rotate(10deg);
+
+    background:var(--accent);
+
+}
+
+.notification span{
+
+    position:absolute;
+
+    right:-2px;
+
+    top:-2px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:11px;
+
+}
+
+/* PROFILE */
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.avatar{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#FF4D5A,#FF7A4D);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+
+.profile h3{
+
+    font-size:16px;
+
+}
+
+.profile p{
+
+    color:var(--text2);
+
+    font-size:13px;
+
+}
+/* ==========================================
+            HERO SECTION
+========================================== */
+
+.hero{
+
+    width:100%;
+
+    background:linear-gradient(135deg,#FF4D5A,#FF784E);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    box-shadow:0 15px 40px rgba(255,77,90,.25);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    right:-120px;
+
+    top:-100px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.hero span{
+
+    color:#FFF7D6;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    color:#FFF5F5;
+
+}
+
+.semester{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    min-width:220px;
+
+}
+
+.semester h3{
+
+    font-size:24px;
+
+}
+
+.semester p{
+
+    margin-top:8px;
+
+    font-weight:600;
+
+}
+
+.semester span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:13px;
+
+    opacity:.9;
+
+}
+
+
+/* ==========================================
+            DASHBOARD CARDS
+========================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    right:-40px;
+
+    top:-40px;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--accent);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
+
+}
+
+.card i{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,77,90,.12);
+
+    color:var(--accent);
+
+    font-size:25px;
+
+    margin-bottom:20px;
+
+}
+
+.card h4{
+
+    color:var(--text2);
+
+    margin-bottom:10px;
+
+    font-weight:500;
+
+}
+
+.card h2{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:var(--text2);
+
+    font-size:14px;
+
+}
+
+.safe{
+
+    color:var(--green)!important;
+
+    font-weight:600;
+
+}
+
+.warning{
+
+    color:#ffb547!important;
+
+}
+
+.danger{
+
+    color:#ff5555!important;
+
+}
+
+
+/* ==========================================
+            ATTENDANCE WARNING
+========================================== */
+
+.warning-card{
+
+    background:linear-gradient(135deg,#1A2336,#151D2E);
+
+    border-radius:22px;
+
+    padding:28px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    border-left:6px solid var(--green);
+
+    transition:.3s;
+
+}
+
+.warning-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.warning-card h2{
+
+    margin-bottom:8px;
+
+}
+
+.warning-card p{
+
+    color:var(--text2);
+
+    font-size:15px;
+
+}
+
+.warning-card span{
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.warning-card button{
+
+    border:none;
+
+    background:var(--green);
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.warning-card button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ==========================================
+            TODAY TIMETABLE
+========================================== */
+
+.today{
+
+    margin-top:10px;
+
+}
+
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.section-title h2{
+
+    font-size:28px;
+
+}
+
+.section-title button{
+
+    border:none;
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.section-title button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+.lecture{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.lecture:hover{
+
+    transform:translateX(8px);
+
+    border-color:var(--accent);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.time{
+
+    width:90px;
+
+    height:70px;
+
+    border-radius:14px;
+
+    background:#1E2A40;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.lecture h3{
+
+    margin-bottom:5px;
+
+}
+
+.lecture p{
+
+    color:var(--text2);
+
+}
+
+.lecture span{
+
+    background:rgba(79,140,255,.18);
+
+    color:var(--blue);
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+/* ==========================================
+            PROCTOR TICKER
+========================================== */
+
+.ticker{
+
+    margin:35px 0;
+
+    background:linear-gradient(90deg,#FF4D5A,#FF7B54);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(255,77,90,.25);
+
+}
+
+.ticker marquee{
+
+    color:white;
+
+    padding:16px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+            QUICK NAVIGATION
+========================================== */
+
+.quick-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+    margin-bottom:50px;
+
+}
+
+.quick-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-decoration:none;
+
+    color:white;
+
+    text-align:center;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.quick-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.03);
+
+    right:-50px;
+
+    top:-50px;
+
+}
+
+.quick-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--accent);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.35);
+
+}
+
+.quick-card i{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    color:var(--accent);
+
+}
+
+.quick-card h3{
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+            POPUP
+========================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+}
+
+.popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.popup-content{
+
+    width:450px;
+
+    background:rgba(19,26,43,.95);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+    animation:popupScale .45s ease;
+
+}
+
+.popup-content h2{
+
+    margin-bottom:18px;
+
+}
+
+.popup-content p{
+
+    color:var(--text2);
+
+    margin-bottom:18px;
+
+    line-height:1.6;
+
+}
+
+.popup-content h3{
+
+    color:var(--yellow);
+
+    margin-bottom:30px;
+
+}
+
+.popup-content button{
+
+    border:none;
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:15px 40px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.popup-content button:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+            PAGE ANIMATIONS
+========================================== */
+
+.hero,
+.card,
+.warning-card,
+.lecture,
+.quick-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.card:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.card:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+.card:nth-child(4){
+
+    animation-delay:.45s;
+
+}
+
+.quick-card:nth-child(2){
+
+    animation-delay:.1s;
+
+}
+
+.quick-card:nth-child(3){
+
+    animation-delay:.2s;
+
+}
+
+.quick-card:nth-child(4){
+
+    animation-delay:.3s;
+
+}
+
+.quick-card:nth-child(5){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes popupScale{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================
+            HOVER IMPROVEMENTS
+========================================== */
+
+button{
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    cursor:pointer;
+
+}
+
+input{
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:var(--accent);
+
+}
+
+.card,
+.quick-card,
+.lecture,
+.warning-card{
+
+    will-change:transform;
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:90px;
+
+        padding:20px 12px;
+
+    }
+
+    .logo-text{
+
+        display:none;
+
+    }
+
+    .sidebar nav a{
+
+        justify-content:center;
+
+        font-size:0;
+
+    }
+
+    .sidebar nav a i{
+
+        font-size:20px;
+
+    }
+
+    .bottom-menu button{
+
+        font-size:0;
+
+    }
+
+    .bottom-menu button i{
+
+        font-size:18px;
+
+    }
+
+    main{
+
+        margin-left:90px;
+
+        width:calc(100% - 90px);
+
+    }
+
+    .hero{
+
+        flex-direction:column;
+
+        gap:25px;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    main{
+
+        padding:20px;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .search{
+
+        width:100%;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .warning-card{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        text-align:center;
+
+    }
+
+    .section-title{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .lecture{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+    }
+
+    .quick-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .popup-content{
+
+        width:92%;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .semester{
+
+        width:100%;
+
+    }
+
+    .card h2{
+
+        font-size:30px;
+
+    }
+
+    .section-title h2{
+
+        font-size:24px;
+
+    }
+
+}
