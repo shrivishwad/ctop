@@ -1,0 +1,1017 @@
+/* =========================================
+   VTOP NEXTGEN
+   ACADEMIC CALENDAR
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+
+    --bg:#070B14;
+    --sidebar:#0E1525;
+    --card:#121827;
+
+    --accent:#FF4D5A;
+    --accent2:#FF8A4D;
+
+    --green:#22C55E;
+    --blue:#3B82F6;
+    --purple:#8B5CF6;
+    --yellow:#FACC15;
+
+    --text:#F5F7FA;
+    --text2:#A7B0C6;
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+/* =====================================
+            LAYOUT
+===================================== */
+
+.container{
+
+    display:grid;
+    grid-template-columns:260px 1fr;
+    min-height:100vh;
+
+}
+
+/* =====================================
+            SIDEBAR
+===================================== */
+
+.sidebar{
+
+    background:var(--sidebar);
+
+    padding:35px 25px;
+
+    border-right:1px solid var(--border);
+
+    position:sticky;
+
+    top:0;
+
+    height:100vh;
+
+}
+
+.sidebar h2{
+
+    font-size:30px;
+    font-weight:800;
+    margin-bottom:45px;
+
+}
+
+.sidebar a{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    text-decoration:none;
+
+    color:var(--text2);
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:#1C2638;
+
+    color:white;
+
+}
+
+.sidebar .active{
+
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+
+    color:white;
+
+}
+
+/* =====================================
+            MAIN
+===================================== */
+
+main{
+
+    padding:40px;
+
+}
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    margin-top:8px;
+
+    color:var(--text2);
+
+}
+
+/* =====================================
+            SEARCH
+===================================== */
+
+.header-right input{
+
+    width:300px;
+
+    height:48px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#141D2F;
+
+    color:white;
+
+    padding:0 18px;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.header-right input:focus{
+
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(255,77,90,.15);
+
+}
+
+/* =====================================
+            SECTION
+===================================== */
+
+section{
+
+    margin-bottom:45px;
+
+}
+
+section h2{
+
+    font-size:28px;
+
+    margin-bottom:22px;
+
+}
+
+/* =====================================
+            STAT CARDS
+===================================== */
+
+.top-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+.stat-card{
+
+    background:var(--card);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    border:1px solid var(--border);
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.22);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(0,0,0,.35);
+
+}
+
+.stat-card h3{
+
+    color:var(--text2);
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+}
+
+.stat-card h1{
+
+    font-size:40px;
+
+    font-weight:800;
+
+}
+/* =====================================
+            CALENDAR CARD
+===================================== */
+
+.calendar-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.22);
+
+}
+
+/* =====================================
+        CALENDAR HEADER
+===================================== */
+
+.calendar-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.calendar-header h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.calendar-header button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1A2437;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.calendar-header button:hover{
+
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+
+    transform:scale(1.08);
+
+}
+
+/* =====================================
+            WEEKDAYS
+===================================== */
+
+.weekdays{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+}
+
+.weekdays div{
+
+    text-align:center;
+
+    color:var(--text2);
+
+    font-weight:600;
+
+    padding:12px 0;
+
+}
+
+/* =====================================
+            CALENDAR GRID
+===================================== */
+
+.calendar-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+}
+
+/* =====================================
+            DATE CELL
+===================================== */
+
+.day{
+
+    min-height:100px;
+
+    background:#161F31;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:12px;
+
+    position:relative;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+}
+
+.day:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(255,77,90,.35);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.30);
+
+}
+
+.day-number{
+
+    font-weight:700;
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+/* =====================================
+            TODAY
+===================================== */
+
+.today{
+
+    border:2px solid var(--accent);
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,77,90,.18),
+        rgba(255,138,77,.12)
+    );
+
+}
+
+/* =====================================
+            EVENT DOTS
+===================================== */
+
+.event-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    margin-top:6px;
+
+}
+
+.exam-dot{
+
+    background:var(--accent);
+
+}
+
+.assignment-dot{
+
+    background:var(--yellow);
+
+}
+
+.holiday-dot{
+
+    background:var(--green);
+
+}
+
+.workshop-dot{
+
+    background:var(--purple);
+
+}
+
+.lab-dot{
+
+    background:var(--blue);
+
+}
+
+/* =====================================
+        UPCOMING EVENTS
+===================================== */
+
+.events-list{
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+.event-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:22px 25px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.20);
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+
+}
+
+.event-left h3{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+.event-left p{
+
+    color:var(--text2);
+
+}
+
+/* =====================================
+        EVENT TAG
+===================================== */
+
+.tag{
+
+    padding:8px 16px;
+
+    border-radius:25px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.tag.exam{
+
+    background:var(--accent);
+
+}
+
+.tag.assignment{
+
+    background:var(--yellow);
+
+    color:#111;
+
+}
+
+.tag.holiday{
+
+    background:var(--green);
+
+}
+
+.tag.workshop{
+
+    background:var(--purple);
+
+}
+
+.tag.lab{
+
+    background:var(--blue);
+
+}
+
+/* =====================================
+            LEGEND
+===================================== */
+
+.legend{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.legend-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:12px 18px;
+
+}
+
+.legend-item span{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+}
+
+.legend-item.exam span{
+
+    background:var(--accent);
+
+}
+
+.legend-item.assignment span{
+
+    background:var(--yellow);
+
+}
+
+.legend-item.holiday span{
+
+    background:var(--green);
+
+}
+
+.legend-item.workshop span{
+
+    background:var(--purple);
+
+}
+
+.legend-item.lab span{
+
+    background:var(--blue);
+
+}
+/* =====================================
+        CALENDAR DAY STATES
+===================================== */
+
+.day.empty{
+
+    background:transparent;
+
+    border:1px dashed rgba(255,255,255,.05);
+
+    cursor:default;
+
+    box-shadow:none;
+
+}
+
+.day.empty:hover{
+
+    transform:none;
+
+    border-color:rgba(255,255,255,.05);
+
+    box-shadow:none;
+
+}
+
+/* =====================================
+        EVENT LABEL
+===================================== */
+
+.event-label{
+
+    margin-top:8px;
+
+    font-size:11px;
+
+    color:var(--text2);
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+/* =====================================
+        FADE ANIMATION
+===================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.calendar-card,
+.stat-card,
+.event-card,
+.legend-item{
+
+    animation:fadeUp .7s ease;
+
+}
+
+/* =====================================
+        SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0B1220;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#303D57;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--accent);
+
+}
+
+/* =====================================
+        RESPONSIVE
+===================================== */
+
+@media(max-width:1200px){
+
+    .top-cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        position:relative;
+
+        height:auto;
+
+        display:flex;
+
+        align-items:center;
+
+        gap:12px;
+
+        overflow-x:auto;
+
+    }
+
+    .sidebar h2{
+
+        display:none;
+
+    }
+
+    .sidebar a{
+
+        white-space:nowrap;
+
+        margin-bottom:0;
+
+    }
+
+    header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .header-right{
+
+        width:100%;
+
+    }
+
+    .header-right input{
+
+        width:100%;
+
+    }
+
+    main{
+
+        padding:25px;
+
+    }
+
+    .calendar-grid{
+
+        gap:8px;
+
+    }
+
+    .day{
+
+        min-height:90px;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .top-cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .weekdays{
+
+        font-size:13px;
+
+        gap:6px;
+
+    }
+
+    .calendar-grid{
+
+        gap:6px;
+
+    }
+
+    .day{
+
+        min-height:75px;
+
+        padding:8px;
+
+    }
+
+    .day-number{
+
+        font-size:16px;
+
+    }
+
+    .event-label{
+
+        display:none;
+
+    }
+
+    .calendar-header h2{
+
+        font-size:22px;
+
+    }
+
+    .event-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    header h1{
+
+        font-size:30px;
+
+    }
+
+    section h2{
+
+        font-size:22px;
+
+    }
+
+    .calendar-header{
+
+        margin-bottom:20px;
+
+    }
+
+    .calendar-header button{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:16px;
+
+    }
+
+    .day{
+
+        min-height:65px;
+
+        border-radius:14px;
+
+    }
+
+    .legend{
+
+        flex-direction:column;
+
+    }
+
+    .legend-item{
+
+        width:100%;
+
+    }
+
+}
+
+/* =====================================
+        OPTIONAL SMOOTH TRANSITIONS
+===================================== */
+
+button,
+input,
+a,
+.day,
+.event-card,
+.stat-card,
+.legend-item{
+
+    transition:all .3s ease;
+
+}
+
+/* =====================================
+        SELECTION COLOR
+===================================== */
+
+::selection{
+
+    background:var(--accent);
+
+    color:white;
+
+}

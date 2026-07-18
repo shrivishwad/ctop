@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grade History | VTOP NextGen</title>
+
+<link rel="stylesheet" href="gradehistory.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<h2>VTOP</h2>
+
+<a href="../Main/main.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+
+<a href="../Attendance/attendance.html">
+<i class="fa-solid fa-user-check"></i>
+Attendance
+</a>
+
+<a href="../Timetable/timetable.html">
+<i class="fa-solid fa-calendar-days"></i>
+Timetable
+</a>
+
+<a href="../Marks/marks.html">
+<i class="fa-solid fa-chart-column"></i>
+Marks
+</a>
+
+<a class="active" href="#">
+<i class="fa-solid fa-chart-line"></i>
+Grade History
+</a>
+
+<a href="../Academic Calendar/calendar.html">
+<i class="fa-solid fa-calendar"></i>
+Academic Calendar
+</a>
+
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+<header>
+
+<div>
+
+<h1>Grade History</h1>
+
+<p class="subtitle">
+Track your academic performance across semesters.
+</p>
+
+</div>
+
+<div class="header-right">
+
+<input
+type="text"
+placeholder="Search Semester..."
+id="semesterSearch">
+
+</div>
+
+</header>
+
+<!-- ================= TOP STATS ================= -->
+
+<section class="top-cards">
+
+<div class="stat-card">
+
+<h3>Current CGPA</h3>
+
+<h1 id="cgpa">8.76</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Highest SGPA</h3>
+
+<h1 id="highestSgpa">9.20</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Credits Earned</h3>
+
+<h1 id="credits">96</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Semesters</h3>
+
+<h1 id="semesterCount">4</h1>
+
+</div>
+
+</section>
+
+<!-- ================= PERFORMANCE ================= -->
+
+<section>
+
+<h2>Semester Performance</h2>
+
+<div id="semesterGrid" class="semester-grid">
+
+<!-- JS -->
+
+</div>
+
+</section>
+
+<!-- ================= GRAPH ================= -->
+
+<section>
+
+<h2>CGPA Growth</h2>
+
+<div class="graph-card">
+
+<svg id="cgpaGraph"
+viewBox="0 0 700 250">
+
+<polyline
+id="graphLine"
+fill="none"
+stroke-width="5"
+points=""
+/>
+
+</svg>
+
+</div>
+
+</section>
+
+<!-- ================= DISTRIBUTION ================= -->
+
+<section>
+
+<h2>Grade Distribution</h2>
+
+<div class="distribution">
+
+<div class="grade-box s">
+
+<h1>8</h1>
+
+<p>S Grade</p>
+
+</div>
+
+<div class="grade-box a">
+
+<h1>14</h1>
+
+<p>A Grade</p>
+
+</div>
+
+<div class="grade-box b">
+
+<h1>7</h1>
+
+<p>B Grade</p>
+
+</div>
+
+<div class="grade-box c">
+
+<h1>3</h1>
+
+<p>C Grade</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section>
+
+<h2>Achievements</h2>
+
+<div class="timeline">
+
+<div class="event">
+
+<h3>Semester 1</h3>
+
+<p>Excellent academic start.</p>
+
+</div>
+
+<div class="event">
+
+<h3>Semester 2</h3>
+
+<p>CGPA improved significantly.</p>
+
+</div>
+
+<div class="event">
+
+<h3>Semester 3</h3>
+
+<p>Scored highest in Artificial Intelligence.</p>
+
+</div>
+
+<div class="event">
+
+<h3>Semester 4</h3>
+
+<p>Maintained consistent performance.</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="gradehistory.js"></script>
+
+</body>
+
+</html>

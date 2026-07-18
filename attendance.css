@@ -1,0 +1,1002 @@
+/* =========================================
+   VTOP NEXTGEN
+   ATTENDANCE.CSS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+
+    --bg:#070B14;
+    --sidebar:#0E1525;
+    --card:#121827;
+    --card2:#182132;
+
+    --accent:#FF4D5A;
+    --accent2:#FF8A4D;
+
+    --green:#21D07A;
+    --yellow:#FFC857;
+    --red:#FF5C5C;
+
+    --text:#F5F7FA;
+    --text2:#A7B0C6;
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+/* ========================================
+            LAYOUT
+======================================== */
+
+.container{
+
+    display:grid;
+
+    grid-template-columns:260px 1fr;
+
+    min-height:100vh;
+
+}
+
+/* ========================================
+            SIDEBAR
+======================================== */
+
+.sidebar{
+
+    background:var(--sidebar);
+
+    padding:35px 25px;
+
+    border-right:1px solid var(--border);
+
+    position:sticky;
+
+    top:0;
+
+    height:100vh;
+
+}
+
+.sidebar h2{
+
+    font-size:28px;
+
+    margin-bottom:45px;
+
+    font-weight:800;
+
+}
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    color:var(--text2);
+
+    text-decoration:none;
+
+    border-radius:14px;
+
+    margin-bottom:10px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:#1C2638;
+
+    color:white;
+
+}
+
+.sidebar .active{
+
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+
+    color:white;
+
+}
+
+/* ========================================
+            MAIN
+======================================== */
+
+main{
+
+    padding:40px;
+
+}
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:40px;
+
+}
+
+header h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+/* ========================================
+            SEARCH
+======================================== */
+
+.search input{
+
+    width:300px;
+
+    height:48px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    padding:0 18px;
+
+    background:#141D2F;
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.search input:focus{
+
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(255,77,90,.15);
+
+}
+
+/* ========================================
+        OVERALL SECTION
+======================================== */
+
+.overall{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:35px;
+
+    margin-bottom:35px;
+
+}
+
+/* ========================================
+        CIRCLE CARD
+======================================== */
+
+.circle-card{
+
+    background:var(--card);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:1px solid var(--border);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.progress-circle{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+        var(--green) 82%,
+        #283243 82%
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:rotateCircle 1.4s ease;
+
+}
+
+.inside{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    background:var(--bg);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.inside h2{
+
+    font-size:42px;
+
+    font-weight:800;
+
+}
+
+.inside p{
+
+    color:var(--text2);
+
+}
+
+/* ========================================
+        STATS
+======================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+.stat{
+
+    background:var(--card);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.stat h3{
+
+    color:var(--text2);
+
+    margin-bottom:18px;
+
+    font-size:15px;
+
+}
+
+.stat h2{
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+/* ========================================
+        WARNING CARD
+======================================== */
+
+.warning{
+
+    background:rgba(255,193,7,.10);
+
+    border:1px solid rgba(255,193,7,.25);
+
+    color:#FFD166;
+
+    padding:18px 24px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:40px;
+
+    font-size:16px;
+
+    animation:fadeUp .7s ease;
+
+}
+
+.warning i{
+
+    font-size:24px;
+
+}
+
+/* ========================================
+        SECTION TITLE
+======================================== */
+
+section h2{
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+/* ========================================
+        SUBJECT GRID
+======================================== */
+
+.subject-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+    margin-bottom:50px;
+
+}
+
+/* ========================================
+        SUBJECT CARD
+======================================== */
+
+.subject-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.22);
+
+}
+
+.subject-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(255,77,90,.30);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+/* ========================================
+        SUBJECT HEADER
+======================================== */
+
+.subject-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.subject-name{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.subject-percent{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:var(--green);
+
+}
+
+/* ========================================
+        PROGRESS BAR
+======================================== */
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:#273246;
+
+    margin:18px 0;
+
+}
+
+.progress span{
+
+    display:block;
+
+    height:100%;
+
+    width:82%;
+
+    background:linear-gradient(
+        90deg,
+        var(--green),
+        #6BF4A6
+    );
+
+    border-radius:30px;
+
+    animation:growBar 1.2s ease;
+
+}
+
+/* ========================================
+        SUBJECT DETAILS
+======================================== */
+
+.subject-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:18px;
+
+    color:var(--text2);
+
+    font-size:14px;
+
+}
+
+.subject-info strong{
+
+    color:white;
+
+}
+
+/* ========================================
+        STATUS BADGES
+======================================== */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.status.good{
+
+    background:rgba(33,208,122,.18);
+
+    color:var(--green);
+
+}
+
+.status.warning{
+
+    background:rgba(255,200,87,.15);
+
+    color:var(--yellow);
+
+}
+
+.status.danger{
+
+    background:rgba(255,92,92,.15);
+
+    color:var(--red);
+
+}
+
+/* ========================================
+        CARD FOOTER
+======================================== */
+
+.subject-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:20px;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--border);
+
+}
+
+/* ========================================
+        SMALL ICON BUTTON
+======================================== */
+
+.subject-btn{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1C2638;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.subject-btn:hover{
+
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+
+    transform:rotate(10deg);
+
+}
+/* ========================================
+        CALCULATOR
+======================================== */
+
+.calculator{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    margin-bottom:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.calc-box{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr auto;
+
+    gap:20px;
+
+    align-items:end;
+
+    margin-top:25px;
+
+}
+
+.calc-box label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:var(--text2);
+
+    font-size:14px;
+
+}
+
+.calc-box input{
+
+    width:100%;
+
+    height:55px;
+
+    border-radius:14px;
+
+    border:1px solid var(--border);
+
+    background:#141D2F;
+
+    color:white;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.calc-box input:focus{
+
+    outline:none;
+
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(255,77,90,.15);
+
+}
+
+.calc-box button{
+
+    height:55px;
+
+    padding:0 30px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 12px 28px rgba(255,77,90,.25);
+
+}
+
+.calc-box button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 35px rgba(255,77,90,.35);
+
+}
+
+#result{
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    color:var(--green);
+
+    font-weight:600;
+
+    min-height:28px;
+
+}
+
+/* ========================================
+        ANIMATIONS
+======================================== */
+
+@keyframes growBar{
+
+    from{
+
+        width:0;
+
+    }
+
+}
+
+@keyframes rotateCircle{
+
+    from{
+
+        transform:scale(.6) rotate(-120deg);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.subject-card{
+
+    animation:fadeUp .6s ease;
+
+}
+
+/* ========================================
+        SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0B1220;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#303D57;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--accent);
+
+}
+
+/* ========================================
+        RESPONSIVE
+======================================== */
+
+@media(max-width:1200px){
+
+    .overall{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stats{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        position:relative;
+
+        height:auto;
+
+        display:flex;
+
+        overflow-x:auto;
+
+        gap:12px;
+
+        align-items:center;
+
+    }
+
+    .sidebar h2{
+
+        display:none;
+
+    }
+
+    .sidebar a{
+
+        white-space:nowrap;
+
+        margin-bottom:0;
+
+    }
+
+    main{
+
+        padding:25px;
+
+    }
+
+    header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .search input{
+
+        width:100%;
+
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .calc-box{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .progress-circle{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .inside{
+
+        width:135px;
+
+        height:135px;
+
+    }
+
+    .inside h2{
+
+        font-size:34px;
+
+    }
+
+    .subject-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    header h1{
+
+        font-size:28px;
+
+    }
+
+    section h2{
+
+        font-size:24px;
+
+    }
+
+    .calculator{
+
+        padding:25px;
+
+    }
+
+}

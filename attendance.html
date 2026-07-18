@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Attendance | VTOP NEXTGEN</title>
+
+<link rel="stylesheet" href="attendance.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/7b4b7dbf53.js"
+crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<h2>VTOP</h2>
+
+<a href="../Main/main.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+
+<a class="active">
+<i class="fa-solid fa-chart-pie"></i>
+Attendance
+</a>
+
+<a href="../Timetable/timetable.html">
+<i class="fa-solid fa-calendar"></i>
+Timetable
+</a>
+
+<a href="../Marks/marks.html">
+<i class="fa-solid fa-book"></i>
+Marks
+</a>
+
+<a href="../Grade History/gradehistory.html">
+<i class="fa-solid fa-graduation-cap"></i>
+Grades
+</a>
+
+<a href="../Academic Calendar/academiccalendar.html">
+<i class="fa-solid fa-calendar-days"></i>
+Calendar
+</a>
+
+</aside>
+
+<!-- Main -->
+
+<main>
+
+<header>
+
+<h1>Attendance Analytics</h1>
+
+<div class="search">
+
+<input
+type="text"
+id="searchSubject"
+placeholder="Search Subject...">
+
+</div>
+
+</header>
+
+<!-- Overall -->
+
+<section class="overall">
+
+<div class="circle-card">
+
+<div class="progress-circle">
+
+<div class="inside">
+
+<h2 id="overallAttendance">
+
+82%
+
+</h2>
+
+<p>Overall</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<h3>Total Classes</h3>
+
+<h2 id="totalClasses">
+
+520
+
+</h2>
+
+</div>
+
+<div class="stat">
+
+<h3>Attended</h3>
+
+<h2 id="attendedClasses">
+
+426
+
+</h2>
+
+</div>
+
+<div class="stat">
+
+<h3>Missed</h3>
+
+<h2 id="missedClasses">
+
+94
+
+</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Warning -->
+
+<section class="warning">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+<span>
+
+You can safely miss 6 more classes.
+
+</span>
+
+</section>
+
+<!-- Subjects -->
+
+<section>
+
+<h2>Subject Attendance</h2>
+
+<div id="subjectGrid" class="subject-grid">
+
+<!-- JS -->
+
+</div>
+
+</section>
+
+<!-- Calculator -->
+
+<section class="calculator">
+
+<h2>
+
+Attendance Calculator
+
+</h2>
+
+<div class="calc-box">
+
+<div>
+
+<label>
+
+Current %
+
+</label>
+
+<input
+id="current"
+type="number"
+placeholder="82">
+
+</div>
+
+<div>
+
+<label>
+
+Desired %
+
+</label>
+
+<input
+id="target"
+type="number"
+placeholder="90">
+
+</div>
+
+<button id="calculate">
+
+Calculate
+
+</button>
+
+</div>
+
+<p id="result"></p>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="attendance.js"></script>
+
+</body>
+
+</html>

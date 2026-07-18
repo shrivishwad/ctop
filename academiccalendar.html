@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic Calendar | VTOP NextGen</title>
+
+    <link rel="stylesheet" href="academiccalendar.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =========================
+            SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <h2>VTOP</h2>
+
+        <a href="../Main/main.html">🏠 Dashboard</a>
+
+        <a href="../Attendance/attendance.html">📊 Attendance</a>
+
+        <a href="../Timetable/timetable.html">📅 Timetable</a>
+
+        <a href="../Marks/marks.html">📝 Marks</a>
+
+        <a href="../Grade History/gradehistory.html">🏆 Grade History</a>
+
+        <a class="active" href="#">🗓 Academic Calendar</a>
+
+    </aside>
+
+    <!-- =========================
+            MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <!-- Header -->
+
+        <header>
+
+            <div>
+
+                <h1>Academic Calendar</h1>
+
+                <p class="subtitle">
+                    Plan your semester effectively.
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <input
+                    type="text"
+                    id="eventSearch"
+                    placeholder="Search events..."
+                >
+
+            </div>
+
+        </header>
+
+        <!-- =========================
+                Statistics
+        ========================== -->
+
+        <section class="top-cards">
+
+            <div class="stat-card">
+
+                <h3>Upcoming Events</h3>
+
+                <h1 id="eventCount">0</h1>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>Assignments</h3>
+
+                <h1 id="assignmentCount">0</h1>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>Examinations</h3>
+
+                <h1 id="examCount">0</h1>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>Holidays</h3>
+
+                <h1 id="holidayCount">0</h1>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+                Calendar
+        ========================== -->
+
+        <section>
+
+            <div class="calendar-card">
+
+                <div class="calendar-header">
+
+                    <button id="prevMonth">
+                        ◀
+                    </button>
+
+                    <h2 id="monthYear">
+
+                        July 2026
+
+                    </h2>
+
+                    <button id="nextMonth">
+                        ▶
+                    </button>
+
+                </div>
+
+                <div class="weekdays">
+
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+
+                </div>
+
+                <div
+                    class="calendar-grid"
+                    id="calendarGrid"
+                >
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+                Upcoming Events
+        ========================== -->
+
+        <section>
+
+            <h2>
+
+                Upcoming Events
+
+            </h2>
+
+            <div
+                class="events-list"
+                id="eventsList"
+            >
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+                Legend
+        ========================== -->
+
+        <section>
+
+            <h2>
+
+                Event Categories
+
+            </h2>
+
+            <div class="legend">
+
+                <div class="legend-item exam">
+
+                    <span></span>
+
+                    Examination
+
+                </div>
+
+                <div class="legend-item assignment">
+
+                    <span></span>
+
+                    Assignment
+
+                </div>
+
+                <div class="legend-item holiday">
+
+                    <span></span>
+
+                    Holiday
+
+                </div>
+
+                <div class="legend-item workshop">
+
+                    <span></span>
+
+                    Workshop
+
+                </div>
+
+                <div class="legend-item lab">
+
+                    <span></span>
+
+                    Lab
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="academiccalendar.js"></script>
+
+</body>
+</html>
